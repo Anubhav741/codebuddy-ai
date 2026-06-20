@@ -25,17 +25,16 @@ export async function generateImage(prompt, style = '') {
   const fullPrompt = styleModifier ? `${prompt}, ${styleModifier}` : prompt;
 
   const response = await fetch(
-    'https://router.huggingface.co/nscale/v1/images/generations',
+    'https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0',
     {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${HF_TOKEN}`,
         'Content-Type': 'application/json',
+        'Accept': 'image/png',
       },
       body: JSON.stringify({
-        prompt: fullPrompt,
-        model: 'stabilityai/stable-diffusion-xl-base-1.0',
-        response_format: 'b64_json',
+        inputs: fullPrompt,
       }),
     }
   );
@@ -45,13 +44,11 @@ export async function generateImage(prompt, style = '') {
     throw new Error(`Image API error ${response.status}: ${errText}`);
   }
 
-  const data = await response.json();
+  // hf-inference returns raw image bytes as a blob
+  const blob = await response.blob();
+  if (!blob || blob.size === 0) throw new Error('No image data returned from API.');
 
-  // API returns { data: [{ b64_json: "..." }] }
-  const b64 = data?.data?.[0]?.b64_json;
-  if (!b64) throw new Error('No image data returned from API.');
-
-  return `data:image/png;base64,${b64}`;
+  return URL.createObjectURL(blob);
 }
 
 // ─── Text-to-Text ─────────────────────────────────────────────────────────────

@@ -6,49 +6,49 @@
   padding: 0;
 }
 
+/* ══════════════════════════════════════════
+   LIGHT THEME (default)
+══════════════════════════════════════════ */
 :root {
-  /* ── Developer Dark Palette ── */
-  --clr-bg:         #0d1117;   /* GitHub-dark background */
-  --clr-surface:    #161b22;   /* Card surface */
-  --clr-surface-2:  #1c2128;   /* Input / elevated surface */
-  --clr-surface-3:  #21262d;   /* Hover states */
+  --clr-bg:         #f0f4ff;
+  --clr-surface:    #ffffff;
+  --clr-surface-2:  #f5f7ff;
+  --clr-surface-3:  #edf0fa;
 
-  --clr-accent:     #58a6ff;   /* Electric Blue – primary CTA */
-  --clr-accent-d:   #388bfd;   /* Deeper blue on hover */
-  --clr-accent-l:   rgba(88,166,255,0.12); /* Tint for chips/badges */
+  --clr-accent:     #2563eb;
+  --clr-accent-d:   #1d4ed8;
+  --clr-accent-l:   rgba(37,99,235,0.10);
 
-  --clr-green:      #3fb950;   /* Online / success */
-  --clr-green-l:    rgba(63,185,80,0.12);
+  --clr-green:      #16a34a;
+  --clr-purple:     #7c3aed;
+  --clr-purple-l:   rgba(124,58,237,0.10);
 
-  --clr-purple:     #bc8cff;   /* Secondary accent */
-  --clr-purple-l:   rgba(188,140,255,0.12);
+  --clr-gold:       #d97706;
+  --clr-gold-d:     #b45309;
+  --clr-gold-l:     rgba(217,119,6,0.12);
 
-  --clr-gold:       #e3b341;   /* Warm CTA / hero button */
-  --clr-gold-d:     #bb9220;
-  --clr-gold-l:     rgba(227,179,65,0.14);
+  --clr-text:       #0f172a;
+  --clr-text-muted: #475569;
+  --clr-text-dim:   #94a3b8;
 
-  --clr-text:       #e6edf3;   /* Primary text */
-  --clr-text-muted: #8b949e;   /* Muted text */
-  --clr-text-dim:   #484f58;   /* Very dim text */
+  --clr-border:     rgba(148,163,184,0.25);
+  --clr-border-md:  rgba(148,163,184,0.45);
+  --clr-border-bright: rgba(37,99,235,0.35);
 
-  --clr-border:     rgba(48,54,61,0.8);
-  --clr-border-md:  rgba(56,68,77,0.9);
-  --clr-border-bright: rgba(88,166,255,0.3);
-
-  /* ── Typography ── */
+  /* Typography */
   --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
   --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
 
-  /* ── Shadows ── */
-  --shadow-xs:  0 1px 3px rgba(0,0,0,0.4);
-  --shadow-sm:  0 2px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3);
-  --shadow-md:  0 4px 16px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4);
-  --shadow-lg:  0 8px 32px rgba(0,0,0,0.7), 0 3px 10px rgba(0,0,0,0.5);
-  --shadow-accent: 0 4px 20px rgba(88,166,255,0.25);
-  --shadow-gold:   0 4px 20px rgba(227,179,65,0.30);
-  --shadow-input-focus: 0 0 0 3px rgba(88,166,255,0.20);
+  /* Shadows */
+  --shadow-xs:  0 1px 3px rgba(15,23,42,0.06);
+  --shadow-sm:  0 2px 8px rgba(15,23,42,0.08), 0 1px 3px rgba(15,23,42,0.04);
+  --shadow-md:  0 4px 16px rgba(15,23,42,0.10), 0 2px 6px rgba(15,23,42,0.06);
+  --shadow-lg:  0 8px 32px rgba(15,23,42,0.12), 0 3px 10px rgba(15,23,42,0.07);
+  --shadow-accent: 0 4px 20px rgba(37,99,235,0.20);
+  --shadow-gold:   0 4px 20px rgba(217,119,6,0.25);
+  --shadow-input-focus: 0 0 0 3px rgba(37,99,235,0.15);
 
-  /* ── Radii ── */
+  /* Radii */
   --r-xs:  4px;
   --r-sm:  8px;
   --r-md:  12px;
@@ -56,10 +56,47 @@
   --r-xl:  22px;
   --r-pill:9999px;
 
-  /* ── Transitions ── */
+  /* Transitions */
   --t-fast:   150ms ease;
   --t-normal: 250ms ease;
   --t-slow:   350ms ease;
+}
+
+/* ══════════════════════════════════════════
+   DARK THEME (toggled via body.dark-mode)
+══════════════════════════════════════════ */
+body.dark-mode {
+  --clr-bg:         #0d1117;
+  --clr-surface:    #161b22;
+  --clr-surface-2:  #1c2128;
+  --clr-surface-3:  #21262d;
+
+  --clr-accent:     #58a6ff;
+  --clr-accent-d:   #388bfd;
+  --clr-accent-l:   rgba(88,166,255,0.12);
+
+  --clr-green:      #3fb950;
+  --clr-purple:     #bc8cff;
+  --clr-purple-l:   rgba(188,140,255,0.12);
+
+  --clr-gold:       #e3b341;
+  --clr-gold-d:     #bb9220;
+  --clr-gold-l:     rgba(227,179,65,0.14);
+
+  --clr-text:       #e6edf3;
+  --clr-text-muted: #8b949e;
+  --clr-text-dim:   #484f58;
+
+  --clr-border:     rgba(48,54,61,0.8);
+  --clr-border-md:  rgba(56,68,77,0.9);
+  --clr-border-bright: rgba(88,166,255,0.3);
+
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.35);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.45), 0 1px 3px rgba(0,0,0,0.25);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.55), 0 2px 6px rgba(0,0,0,0.35);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.65), 0 3px 10px rgba(0,0,0,0.45);
+  --shadow-accent: 0 4px 20px rgba(88,166,255,0.25);
+  --shadow-input-focus: 0 0 0 3px rgba(88,166,255,0.20);
 }
 
 /* ── Reduced motion ── */
@@ -80,6 +117,7 @@ body {
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   min-height: 100vh;
+  transition: background-color var(--t-normal), color var(--t-normal);
 }
 
 #root {

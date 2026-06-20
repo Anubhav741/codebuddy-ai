@@ -426,7 +426,7 @@ function ChatTab() {
 // ─── Root App ─────────────────────────────────────────────────────────────────
 export default function App() {
   const [activeTab, setActiveTab] = useState('chat');
-  const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark for dev theme
+  const [isDarkMode, setIsDarkMode] = useState(false); // Default light theme
 
   useEffect(() => {
     if (isDarkMode) {
