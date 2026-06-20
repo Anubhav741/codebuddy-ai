@@ -2,8 +2,8 @@ const HF_TOKEN = import.meta.env.VITE_HF_TOKEN;
 
 // ─── Text-to-Image ────────────────────────────────────────────────────────────
 /**
- * Calls the Hugging Face SDXL image-generation endpoint.
- * Returns a base64 data-URL string ready for <img src=...>.
+ * Calls the Hugging Face FLUX.1-schnell image-generation endpoint.
+ * Returns an object URL ready for <img src=...>.
  *
  * @param {string} prompt  - User's text description
  * @param {string} style   - Optional style modifier appended to the prompt
@@ -25,7 +25,7 @@ export async function generateImage(prompt, style = '') {
   const fullPrompt = styleModifier ? `${prompt}, ${styleModifier}` : prompt;
 
   const response = await fetch(
-    'https://router.huggingface.co/hf-inference/models/stabilityai/stable-diffusion-xl-base-1.0',
+    'https://router.huggingface.co/hf-inference/models/black-forest-labs/FLUX.1-schnell',
     {
       method: 'POST',
       headers: {
