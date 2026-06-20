@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* ── Developer Dark Palette ── */
+  --clr-bg:         #0d1117;   /* GitHub-dark background */
+  --clr-surface:    #161b22;   /* Card surface */
+  --clr-surface-2:  #1c2128;   /* Input / elevated surface */
+  --clr-surface-3:  #21262d;   /* Hover states */
+
+  --clr-accent:     #58a6ff;   /* Electric Blue – primary CTA */
+  --clr-accent-d:   #388bfd;   /* Deeper blue on hover */
+  --clr-accent-l:   rgba(88,166,255,0.12); /* Tint for chips/badges */
+
+  --clr-green:      #3fb950;   /* Online / success */
+  --clr-green-l:    rgba(63,185,80,0.12);
+
+  --clr-purple:     #bc8cff;   /* Secondary accent */
+  --clr-purple-l:   rgba(188,140,255,0.12);
+
+  --clr-gold:       #e3b341;   /* Warm CTA / hero button */
+  --clr-gold-d:     #bb9220;
+  --clr-gold-l:     rgba(227,179,65,0.14);
+
+  --clr-text:       #e6edf3;   /* Primary text */
+  --clr-text-muted: #8b949e;   /* Muted text */
+  --clr-text-dim:   #484f58;   /* Very dim text */
+
+  --clr-border:     rgba(48,54,61,0.8);
+  --clr-border-md:  rgba(56,68,77,0.9);
+  --clr-border-bright: rgba(88,166,255,0.3);
+
+  /* ── Typography ── */
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  /* ── Shadows ── */
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.4);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md:  0 4px 16px rgba(0,0,0,0.6), 0 2px 6px rgba(0,0,0,0.4);
+  --shadow-lg:  0 8px 32px rgba(0,0,0,0.7), 0 3px 10px rgba(0,0,0,0.5);
+  --shadow-accent: 0 4px 20px rgba(88,166,255,0.25);
+  --shadow-gold:   0 4px 20px rgba(227,179,65,0.30);
+  --shadow-input-focus: 0 0 0 3px rgba(88,166,255,0.20);
+
+  /* ── Radii ── */
+  --r-xs:  4px;
+  --r-sm:  8px;
+  --r-md:  12px;
+  --r-lg:  16px;
+  --r-xl:  22px;
+  --r-pill:9999px;
+
+  /* ── Transitions ── */
+  --t-fast:   150ms ease;
+  --t-normal: 250ms ease;
+  --t-slow:   350ms ease;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  font-size: 15px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Focus ring (WCAG AA) ── */
+:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--clr-bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--clr-border-md);
+  border-radius: var(--r-pill);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--clr-text-dim);
+}
