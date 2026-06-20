@@ -1,66 +1,128 @@
-# 🤖 AI Studio (Chat & Image Generator)
+<div align="center">
 
-Welcome to **AI Studio**, a premium, dual-purpose web application featuring an interactive AI Chat Assistant and an AI-powered Text-to-Image Generator. 
+# ⚡ CodeBuddy AI Assistant
 
-Built with modern React 19, Vite, and highly polished Vanilla CSS (adhering to a refined Soft UI design system), it connects directly to state-of-the-art models hosted on Hugging Face.
+### A professional AI-powered coding companion built for developers
+
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-codebuddy--ai--alpha.vercel.app-2563eb?style=for-the-badge&logo=vercel&logoColor=white)](https://codebuddy-ai-alpha.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-Anubhav741%2Fcodebuddy--ai-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Anubhav741/codebuddy-ai)
+[![Built for](https://img.shields.io/badge/Built%20for-Digital%20Heroes-e3b341?style=for-the-badge)](https://digitalheroesco.com)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
+[![Vite](https://img.shields.io/badge/Vite-8-646cff?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev)
+
+<br/>
+
+> Built by **Anubhav Gupta** · [anubhavgupta960@gmail.com](mailto:anubhavgupta960@gmail.com)
+
+</div>
 
 ---
 
-## 🔗 Live Deployment
-🚀 **Open the Application:** [https://chat-bot-virid-three.vercel.app](https://chat-bot-virid-three.vercel.app)
+## 📖 About
+
+**CodeBuddy AI Assistant** is a developer-focused AI chatbot and image generation tool, built as a hiring task for [Digital Heroes](https://digitalheroesco.com).
+
+I frequently use AI assistants while coding and wanted a **faster and cleaner learning assistant** — one that's focused on developers, not generic use cases. This project is the result of that goal.
+
+### What makes it different from a generic ChatGPT clone?
+- 🎯 **Developer-first UX** — Example prompts, code-focused suggestions, monospace typography
+- 🌗 **Light & Dark theme** with a working toggle
+- ⚡ **FLUX.1-schnell** image generation — state-of-the-art, fast model
+- 🏗️ **Clean architecture** — custom React hooks, no external UI libraries
+- 📱 **Fully responsive** — works great on mobile
+
+---
+
+## 🚀 Live Demo
+
+| | Link |
+|---|---|
+| 🌐 **Production** | [https://codebuddy-ai-alpha.vercel.app](https://codebuddy-ai-alpha.vercel.app) |
+| 📦 **GitHub Repo** | [https://github.com/Anubhav741/codebuddy-ai](https://github.com/Anubhav741/codebuddy-ai) |
 
 ---
 
 ## ✨ Features
 
-### 1. 💬 Hinglish AI Chat Assistant
-* **Natural Language Processing:** Engaging conversational companion powered by `Qwen2.5` instruction models.
-* **Hinglish Understanding:** Pre-configured system instructions allow the assistant to easily parse and reply to Hindi-English mixed languages (e.g., *"Aaj ka weather kaisa hai?"* or *"Help me write an email"*).
-* **Context Preservation:** Maintains thread history dynamically.
+### 💬 AI Chat Assistant
+- Powered by **Qwen2.5** via Hugging Face Router
+- Developer-focused example prompts (closures, React errors, debugging)
+- Full conversation history with smooth auto-scroll
+- Typing indicator animation
+- Clear chat functionality
+- One-click prompt insertion from suggestions
 
-### 2. 🎨 AI Image Generator
-* **Stable Diffusion XL:** Generates high-quality illustrations from text descriptions using the SDXL 1.0 architecture.
-* **Preset Styles:** Toggle between 8 distinct artistic presets:
-  - 📸 **Photorealistic** (ultra detailed, 8k)
-  - 🎨 **Digital Art** (vibrant, concept art)
-  - 🖌️ **Oil Painting** (classical, brushstroke texture)
-  - 💧 **Watercolor** (artistic, flowing colors)
-  - 🇯🇵 **Anime** (cel shaded illustration)
-  - 🎬 **Cinematic** (dramatic lighting, film grain)
-  - 🧊 **3D Render** (octane render, CGI)
-  - 👾 **Pixel Art** (retro 16-bit)
-* **Smooth Image Previews:** Instantly renders base64-encoded image payloads with graceful loading transitions.
+### 🎨 AI Image Generator
+- Powered by **FLUX.1-schnell** (Black Forest Labs) — currently the fastest open image model
+- 8 artistic style presets:
 
-### 3. 🌗 Soft UI Theme System
-* **Premium Aesthetics:** Cream and blush color palettes, elegant Cormorant Garamond serif headings, and micro-interactions.
-* **Dark Mode:** A togglable dark mode (using Sun/Moon icons in the header) adapting custom CSS variables to a comfortable charcoal theme.
-* **Reduced Motion Support:** Respects system-level `prefers-reduced-motion` settings.
+| Style | Description |
+|---|---|
+| 📷 Photorealistic | Ultra detailed, 8K |
+| 🎨 Digital Art | Vibrant, concept art |
+| 🖼️ Oil Painting | Classical, brushstroke texture |
+| 💧 Watercolor | Soft, flowing colors |
+| ✨ Anime | Cel-shaded illustration |
+| 🎬 Cinematic | Film grain, dramatic lighting |
+| 🧊 3D Render | Octane render, volumetric CGI |
+| 👾 Pixel Art | Retro 16-bit |
+
+- Download and share generated images
+- 500 character prompt limit with live counter
+
+### 🎨 UI / UX
+- **Light theme** (default) + **Dark mode** toggle
+- **Inter** font + **JetBrains Mono** for code elements
+- Subtle grid background with gradient accents
+- Animated badge, typing dots, progress bar
+- Fully responsive — mobile, tablet, desktop
+
+### 🔗 Branding
+- **"Built for Digital Heroes"** button → [digitalheroesco.com](https://digitalheroesco.com)
+- **Why I built this** card with personal motivation
+- Footer with creator name, email, and links
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Tech Stack
 
-* **Frontend Framework:** React 19 (Hooks, Context, Declarative UI)
-* **Build Tool:** Vite (Hot Module Replacement, super-fast bundling)
-* **Styling:** Custom Vanilla CSS (`src/App.css` and `src/index.css`)
-* **API Integration:** Direct HTTPS requests via standard `fetch` with raw token authorization headers to the Hugging Face Router endpoints.
-
-### Key File Structure:
-* 📂 `src/hfApi.js`: Handles API calls for both text chat completions and image generation.
-* 📂 `src/useTextChat.js`: Custom React hook encapsulating message lists, input states, loading status, and error states for chat.
-* 📂 `src/useImageGenerator.js`: Custom React hook encapsulating generation inputs, loading animations, image base64 responses, and styles.
-* 📂 `src/App.jsx`: Main layouts, tab-switching systems (Chat vs. Image Generator), and Dark Mode context bindings.
+| Layer | Technology |
+|---|---|
+| **Frontend** | React 19 + JSX |
+| **Build Tool** | Vite 8 |
+| **Styling** | Vanilla CSS (custom design system, zero UI libs) |
+| **AI Chat** | Hugging Face Router → Qwen2.5-1.5B-Instruct |
+| **AI Images** | Hugging Face Inference → FLUX.1-schnell |
+| **Deployment** | Vercel |
+| **Font** | Inter + JetBrains Mono (Google Fonts) |
 
 ---
 
-## 🚀 Local Development Setup
+## 📁 Project Structure
 
-To run this project locally, follow these steps:
+```
+codebuddy-ai/
+├── src/
+│   ├── App.jsx              # Main app, routing, tab switching, theme toggle
+│   ├── App.css              # Component styles & design system
+│   ├── index.css            # Global styles, CSS variables (light + dark)
+│   ├── hfApi.js             # Hugging Face API calls (chat + image)
+│   ├── useTextChat.js       # Custom hook — chat state, messages, errors
+│   └── useImageGenerator.js # Custom hook — image generation state
+├── index.html               # HTML template with SEO meta tags
+├── .env.example             # Environment variable template
+├── vite.config.js
+└── package.json
+```
 
-### 1. Clone the repository
+---
+
+## ⚙️ Local Setup
+
+### 1. Clone the repo
 ```bash
-git clone https://github.com/Anubhav741/chat-bot.git
-cd chat-bot
+git clone https://github.com/Anubhav741/codebuddy-ai.git
+cd codebuddy-ai
 ```
 
 ### 2. Install dependencies
@@ -68,34 +130,69 @@ cd chat-bot
 npm install
 ```
 
-### 3. Setup environment variables
+### 3. Add your Hugging Face token
 Create a `.env` file in the root directory:
 ```env
-VITE_HF_TOKEN=your_hugging_face_token_here
+VITE_HF_TOKEN=hf_your_token_here
 ```
-> Get your Hugging Face API token from [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) (requires read access).
 
-### 4. Start the development server
+> 🔑 Get your free token at [huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) — requires **Read** access.
+
+### 4. Start the dev server
 ```bash
 npm run dev
 ```
-Open [http://localhost:5173](http://localhost:5173) in your browser to view the application.
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 🌐 Deployment to Vercel
+## 🌐 Deploy to Vercel
 
-The application is deployed via Vercel CLI. When pushing updates:
-1. Ensure your Environment Variable `VITE_HF_TOKEN` is added to the Vercel dashboard or CLI:
-   ```bash
-   npx vercel env add VITE_HF_TOKEN production --value "your_token" --yes
-   ```
-2. Trigger the production deployment:
-   ```bash
-   npx vercel --prod --yes
-   ```
+### Option A — Via Vercel Dashboard (recommended)
+1. Go to [vercel.com/new](https://vercel.com/new)
+2. Import `Anubhav741/codebuddy-ai` from GitHub
+3. Add environment variable: `VITE_HF_TOKEN` = your token
+4. Click **Deploy**
+
+### Option B — Via CLI
+```bash
+# Add env variable
+npx vercel env add VITE_HF_TOKEN production
+
+# Deploy to production
+npx vercel --prod
+```
+
+---
+
+## 🔌 API Reference
+
+| Feature | Endpoint | Model |
+|---|---|---|
+| Chat | `router.huggingface.co/v1/chat/completions` | `Qwen/Qwen2.5-1.5B-Instruct:featherless-ai` |
+| Images | `router.huggingface.co/hf-inference/models/...` | `black-forest-labs/FLUX.1-schnell` |
+
+> ⚠️ **Note on VITE_ prefix:** HF tokens prefixed with `VITE_` are bundled into the client. For production apps, proxy API calls through a server-side function. For this demo/hiring task, client-side is acceptable.
+
+---
+
+## 👤 Author
+
+**Anubhav Gupta**
+
+- 📧 Email: [anubhavgupta960@gmail.com](mailto:anubhavgupta960@gmail.com)
+- 💼 Built for: [Digital Heroes](https://digitalheroesco.com)
+- 🐙 GitHub: [Anubhav741](https://github.com/Anubhav741)
 
 ---
 
 ## 📄 License
-This project is private and created as part of AI UI UX showcase.
+
+This project was created as a developer hiring task for **Digital Heroes**. Feel free to reference the code for learning purposes.
+
+---
+
+<div align="center">
+  Built with ❤️ using React + Vite · Deployed on Vercel
+</div>
